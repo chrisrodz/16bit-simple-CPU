@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="3"/>
+    </tool>
+    <tool name="Pin">
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+    </tool>
+    <tool name="Probe">
+      <a name="facing" val="west"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="16"/>
+    </tool>
+    <tool name="Clock">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Constant">
+      <a name="width" val="16"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="Tabla control"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="Tabla control">
+    <a name="circuit" val="Tabla control"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(440,260)" to="(470,260)"/>
+    <wire from="(440,120)" to="(480,120)"/>
+    <wire from="(520,220)" to="(530,220)"/>
+    <wire from="(440,220)" to="(510,220)"/>
+    <wire from="(440,210)" to="(520,210)"/>
+    <wire from="(510,190)" to="(510,200)"/>
+    <wire from="(520,210)" to="(520,220)"/>
+    <wire from="(480,150)" to="(490,150)"/>
+    <wire from="(510,190)" to="(530,190)"/>
+    <wire from="(480,150)" to="(480,190)"/>
+    <wire from="(490,330)" to="(530,330)"/>
+    <wire from="(310,270)" to="(420,270)"/>
+    <wire from="(440,190)" to="(480,190)"/>
+    <wire from="(480,360)" to="(530,360)"/>
+    <wire from="(470,260)" to="(470,400)"/>
+    <wire from="(440,120)" to="(440,180)"/>
+    <wire from="(480,250)" to="(480,360)"/>
+    <wire from="(440,200)" to="(510,200)"/>
+    <wire from="(440,230)" to="(500,230)"/>
+    <wire from="(490,240)" to="(490,330)"/>
+    <wire from="(440,240)" to="(490,240)"/>
+    <wire from="(470,400)" to="(530,400)"/>
+    <wire from="(440,250)" to="(480,250)"/>
+    <wire from="(90,270)" to="(170,270)"/>
+    <wire from="(500,230)" to="(500,290)"/>
+    <wire from="(500,290)" to="(530,290)"/>
+    <wire from="(510,250)" to="(530,250)"/>
+    <wire from="(510,220)" to="(510,250)"/>
+    <comp lib="6" loc="(303,84)" name="Text">
+      <a name="text" val="2. AluOp2"/>
+    </comp>
+    <comp lib="6" loc="(274,134)" name="Text">
+      <a name="text" val="4. AluOp4"/>
+    </comp>
+    <comp lib="6" loc="(378,127)" name="Text">
+      <a name="text" val="11. AluSrcAbajo"/>
+    </comp>
+    <comp lib="4" loc="(310,270)" name="ROM">
+      <a name="addrWidth" val="4"/>
+      <a name="dataWidth" val="13"/>
+      <a name="contents">addr/data: 4 13
+302 303 1a2 42 301 300 304 0
+702 7ff c10 1410 0 0 0 1810
+</a>
+    </comp>
+    <comp lib="0" loc="(90,270)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Operation"/>
+    </comp>
+    <comp lib="6" loc="(127,365)" name="Text">
+      <a name="text" val="PcSrc"/>
+    </comp>
+    <comp lib="6" loc="(439,62)" name="Text">
+      <a name="text" val="8. MemtoReg"/>
+    </comp>
+    <comp lib="6" loc="(339,148)" name="Text">
+      <a name="text" val="12. PCSrc"/>
+    </comp>
+    <comp lib="0" loc="(530,330)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="RegDest"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(101,458)" name="Text">
+      <a name="text" val="11: Jump"/>
+    </comp>
+    <comp lib="6" loc="(323,169)" name="Text">
+      <a name="text" val="13. PCSrc"/>
+    </comp>
+    <comp lib="6" loc="(103,432)" name="Text">
+      <a name="text" val="10: BNZ"/>
+    </comp>
+    <comp lib="0" loc="(530,360)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="AluSrcAbajo"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(300,108)" name="Text">
+      <a name="text" val="3. AluOp3"/>
+    </comp>
+    <comp lib="6" loc="(276,154)" name="Text">
+      <a name="text" val="5. Branch"/>
+    </comp>
+    <comp lib="0" loc="(530,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="MemWrite"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(118,387)" name="Text">
+      <a name="text" val="00: PC+1"/>
+    </comp>
+    <comp lib="0" loc="(530,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="MemRead"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(480,120)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Alu Operation"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(266,197)" name="Text">
+      <a name="text" val="7. MemWrite"/>
+    </comp>
+    <comp lib="6" loc="(100,407)" name="Text">
+      <a name="text" val="01: BZ"/>
+    </comp>
+    <comp lib="0" loc="(530,400)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="label" val="PCSrc"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(392,105)" name="Text">
+      <a name="text" val="10. RegDst"/>
+    </comp>
+    <comp lib="0" loc="(530,290)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="RegWrite"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(530,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="MemtoReg"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(420,270)" name="Splitter">
+      <a name="fanout" val="9"/>
+      <a name="incoming" val="13"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="2"/>
+      <a name="bit6" val="3"/>
+      <a name="bit7" val="4"/>
+      <a name="bit8" val="5"/>
+      <a name="bit9" val="6"/>
+      <a name="bit10" val="7"/>
+      <a name="bit11" val="8"/>
+      <a name="bit12" val="8"/>
+    </comp>
+    <comp lib="6" loc="(373,34)" name="Text">
+      <a name="text" val="From right to left:"/>
+    </comp>
+    <comp lib="6" loc="(264,174)" name="Text">
+      <a name="text" val="6. MemRead"/>
+    </comp>
+    <comp lib="0" loc="(490,150)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Branch"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(327,62)" name="Text">
+      <a name="text" val="1. AluOp1"/>
+    </comp>
+    <comp lib="6" loc="(406,82)" name="Text">
+      <a name="text" val="9. RegWrite"/>
+    </comp>
+  </circuit>
+</project>
